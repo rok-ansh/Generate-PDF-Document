@@ -19,8 +19,8 @@ for index, row in df.iterrows():
     pdf.set_text_color(100,100,100)
     pdf.cell(w=0, h=12,txt=row["Topic"], align='L', ln=1)
     # Adding line to master page
-    for i in range(0, 270, 10):
-        pdf.line(10,22+i,200, 22+i)
+    for y in range(20, 290, 10):
+        pdf.line(10,y,200, y)
 
     # Set footer for master page
     pdf.ln(265)
@@ -37,8 +37,8 @@ for index, row in df.iterrows():
         pdf.cell(w=0, h=12, txt=row["Topic"], align='R', ln=1)
 
         # Adding line to subpages
-        for i in range(0, 290, 10):
-            pdf.line(10, 10 + i, 200, 10 + i)
+        for y in range(10, 290, 10):
+            pdf.line(10, y, 200, y)
 
 # Create multiple pdf
 pdf.output("output.pdf" "")
