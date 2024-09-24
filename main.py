@@ -20,4 +20,3 @@ for index, row in df.iterrows():
 
 # Create multiple pdf
 pdf.output("output.pdf" "")
-print("Done")
